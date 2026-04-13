@@ -1,77 +1,92 @@
-/* Import a clean, elegant font */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&family=Dancing+Script&display=swap');
 
-/* Overall page styling */
+/* Page background */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(
-        rgba(20, 60, 30, 0.7),
-        rgba(20, 60, 30, 0.7)
-    ),
-    url('forest-background.jpg') no-repeat center/cover;
-    color: #f4fff4;
+    background: #eaf5ea; /* soft green */
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-/* Main invite container */
+/* Main card */
 .invite-container {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: #ffffff;
+    width: 600px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0, 80, 40, 0.2);
+    border-radius: 10px;
+    position: relative;
 }
 
-/* Title (BIGGEST) */
+/* Subtle leafy accent */
+.invite-container::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #cdeccd, transparent);
+    z-index: 0;
+}
+
+/* Vertical GRADUATE text */
 .title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #d8ffd8;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: #2f6b3f;
 }
 
-/* Header (MIDDLE SIZE) */
-.header {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: #b6f5b6;
-}
-
-/* Body text (SMALLEST) */
-.body-text {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #eaffea;
-}
-
-/* Image container */
-.image-row {
+/* Content area */
+.content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 10px;
+    z-index: 1;
 }
 
-/* Individual images */
-.image-row img {
-    width: 30%;
-    border-radius: 12px;
+/* Image grid like your example */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 140px;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    border-radius: 6px;
 }
 
-/* Optional subtle hover effect */
-.image-row img:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease;
+/* Make bottom image bigger */
+.image-grid img.large {
+    grid-column: span 2;
+    height: 180px;
+}
+
+/* Name (script style like example) */
+.header {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #1f4d2b;
+    margin-top: 10px;
+}
+
+/* Small details text */
+.body-text {
+    font-size: 12px;
+    color: #4e6f57;
+    letter-spacing: 1px;
 }
