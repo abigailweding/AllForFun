@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&family=Dancing+Script&display=swap');
-
-/* Page background */
 body {
     margin: 0;
     padding: 0;
-    background: #eaf5ea; /* soft green */
-    font-family: 'Poppins', sans-serif;
+    background: #e6f4ea;
+    font-family: Arial, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,79 +12,54 @@ body {
 
 /* Main card */
 .invite-container {
-    background: #ffffff;
-    width: 600px;
+    background: white;
+    width: 500px;
     padding: 20px;
     display: grid;
     grid-template-columns: 80px 1fr;
     gap: 15px;
-    box-shadow: 0 10px 25px rgba(0, 80, 40, 0.2);
     border-radius: 10px;
-    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Subtle leafy accent */
-.invite-container::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle, #cdeccd, transparent);
-    z-index: 0;
-}
-
-/* Vertical GRADUATE text */
+/* Vertical title */
 .title {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    letter-spacing: 4px;
-    color: #2f6b3f;
+    font-size: 26px;
+    font-weight: bold;
+    color: #1b4332; /* dark green */
 }
 
-/* Content area */
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1;
-}
-
-/* Image grid like your example */
+/* Image layout */
 .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
     gap: 8px;
 }
 
 .image-grid img {
     width: 100%;
-    height: 140px;
+    height: 120px;
     object-fit: cover;
     border-radius: 6px;
 }
 
-/* Make bottom image bigger */
-.image-grid img.large {
+/* Bottom image bigger */
+.image-grid .large {
     grid-column: span 2;
-    height: 180px;
+    height: 160px;
 }
 
-/* Name (script style like example) */
+/* Name */
 .header {
-    font-family: 'Dancing Script', cursive;
-    font-size: 28px;
-    color: #1f4d2b;
+    font-size: 24px;
     margin-top: 10px;
+    color: #1b4332;
 }
 
-/* Small details text */
+/* Small text */
 .body-text {
-    font-size: 12px;
-    color: #4e6f57;
-    letter-spacing: 1px;
+    font-size: 14px;
+    color: #344e41;
 }
