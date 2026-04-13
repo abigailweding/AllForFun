@@ -1,0 +1,77 @@
+/* Import a clean, elegant font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Overall page styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(
+        rgba(20, 60, 30, 0.7),
+        rgba(20, 60, 30, 0.7)
+    ),
+    url('forest-background.jpg') no-repeat center/cover;
+    color: #f4fff4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main invite container */
+.invite-container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Title (BIGGEST) */
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #d8ffd8;
+}
+
+/* Header (MIDDLE SIZE) */
+.header {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #b6f5b6;
+}
+
+/* Body text (SMALLEST) */
+.body-text {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #eaffea;
+}
+
+/* Image container */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Individual images */
+.image-row img {
+    width: 30%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Optional subtle hover effect */
+.image-row img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
