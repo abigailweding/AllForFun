@@ -1,65 +1,79 @@
+/* Import a soft, elegant font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans:wght@300;400&display=swap');
+
+/* Page background */
 body {
     margin: 0;
     padding: 0;
-    background: #e6f4ea;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(rgba(245, 250, 245, 0.9), rgba(245, 250, 245, 0.9)),
+                url('https://www.transparenttextures.com/patterns/leaf.png');
+    color: #2f4f2f;
+    text-align: center;
+}
 
+/* Main container feel */
+body {
+    padding: 40px 20px;
+}
+
+/* Title (fixing your <h> tag visually) */
+h {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #3a5a40;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/* Name styling */
+p {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+/* Event details */
+p1 {
+    display: block;
+    font-size: 16px;
+    color: #588157;
+    margin-bottom: 30px;
+}
+
+/* Image row layout */
+.image-row {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Main card */
-.invite-container {
-    background: white;
-    width: 500px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+/* Image styling */
+.image-row img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #a3b18a;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-/* Vertical title */
-.title {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 26px;
-    font-weight: bold;
-    color: #1b4332; /* dark green */
+/* Hover effect */
+.image-row img:hover {
+    transform: scale(1.05);
 }
 
-/* Image layout */
-.image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
-
-.image-grid img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-/* Bottom image bigger */
-.image-grid .large {
-    grid-column: span 2;
-    height: 160px;
-}
-
-/* Name */
-.header {
-    font-size: 24px;
-    margin-top: 10px;
-    color: #1b4332;
-}
-
-/* Small text */
-.body-text {
-    font-size: 14px;
-    color: #344e41;
+/* Add a subtle card effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid #a3b18a;
+    border-radius: 20px;
+    pointer-events: none;
 }
